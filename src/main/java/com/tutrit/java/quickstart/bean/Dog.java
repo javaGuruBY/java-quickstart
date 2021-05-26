@@ -1,14 +1,10 @@
 package com.tutrit.java.quickstart.bean;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Objects;
 
 public class Dog extends Animal {
     private String collar;//POJO
 
-    Logger log = LoggerFactory.getLogger("Dog");
 
     public Dog() {
     }
@@ -28,25 +24,18 @@ public class Dog extends Animal {
     }
 
 
-
-    void bark() {
-        log.debug(" dog say");
-        log.debug(" hau hau");
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Dog)) return false;
         if (!super.equals(o)) return false;
         Dog dog = (Dog) o;
-        return Objects.equals(collar, dog.collar) &&
-                Objects.equals(log, dog.log);
+        return Objects.equals(collar, dog.collar);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), collar, log);
+        return Objects.hash(super.hashCode(), collar);
     }
 
     @Override
