@@ -15,10 +15,6 @@ public class CreditCard {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
     public double getLimit() {
         return limit;
     }
@@ -29,10 +25,6 @@ public class CreditCard {
 
     public double getLoanDebt() {
         return loanDebt;
-    }
-
-    public void setLoanDebt(double loanDebt) {
-        this.loanDebt = loanDebt;
     }
 
     public CreditCard(String number, int pinCode) {
@@ -58,9 +50,7 @@ public class CreditCard {
                 loanDebt = loanDebt - summ;
             }
 
-
         }
-
 
     }
 
